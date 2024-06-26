@@ -135,6 +135,7 @@
 #include "llvm/Transforms/Utils/MoveAutoInit.h"
 #include "llvm/Transforms/Utils/NameAnonGlobals.h"
 #include "llvm/Transforms/Utils/RelLookupTableConverter.h"
+#include "llvm/Transforms/Utils/DbgRemove.h"
 #include "llvm/Transforms/Utils/SimplifyCFGOptions.h"
 #include "llvm/Transforms/Vectorize/LoopVectorize.h"
 #include "llvm/Transforms/Vectorize/SLPVectorizer.h"
@@ -549,6 +550,10 @@ PassBuilder::buildFunctionSimplificationPipeline(OptimizationLevel Level,
     return buildO1FunctionSimplificationPipeline(Level, Phase);
 
   FunctionPassManager FPM;
+
+  if (Level == OptimizationLevel::O2)
+    FPM.addPass(DbgRemove());
+
 
   if (AreStatisticsEnabled())
     FPM.addPass(CountVisitsPass());

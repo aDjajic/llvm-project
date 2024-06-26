@@ -1,0 +1,16 @@
+Function: foo
+	llvm.dbg.values: 1
+	llvm.dbg.declare: 0
+	llvm.dbg.assign: 0
+Function: bar
+	llvm.dbg.values: 0
+	llvm.dbg.declare: 0
+	llvm.dbg.assign: 0
+Function: addNumbers
+	llvm.dbg.values: 1
+	llvm.dbg.declare: 0
+	llvm.dbg.assign: 0
+Function: hcf
+	llvm.dbg.values: 2
+	llvm.dbg.declare: 0
+	llvm.dbg.assign: 0
