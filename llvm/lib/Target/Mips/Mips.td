@@ -288,7 +288,7 @@ def : ProcessorModel<"p5600", MipsP5600Model, [ImplP5600]>;
 def : Proc<"nanomips", [FeatureNanoMips]>;
 def : Proc<"nms1", [FeatureNMS1]>; // Not implemented!
 def : ProcessorModel<"i7200", MipsI7200Model, [FeatureI7200, FeatureTLB, FeatureEVA,
-		     FeatureMT]>; // FIXME: DSPr3 to be implemented
+		     FeatureGINV, FeatureMT]>; // FIXME: DSPr3 to be implemented
 
 def MipsAsmParser : AsmParser {
   let ShouldEmitMatchRegisterName = 0;
