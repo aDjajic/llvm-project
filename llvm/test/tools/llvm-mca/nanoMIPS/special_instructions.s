@@ -53,7 +53,7 @@ wrpgpr $a0, $a1
 # CHECK-NEXT: [6]: HasSideEffects (U)
 
 # CHECK:      [1]    [2]    [3]    [4]    [5]    [6]    Instructions:
-# CHECK-NEXT:  1      1     1.00                  U     break	5
+# CHECK-NEXT:  1      1     1.00                  U     break	0x5
 # CHECK-NEXT:  1      2     1.00                  U     cache	0, 0($a1)
 # CHECK-NEXT:  1      1     1.00                  U     deret
 # CHECK-NEXT:  1      2     2.00                  U     di	$a0
@@ -71,11 +71,11 @@ wrpgpr $a0, $a1
 # CHECK-NEXT:  1      2     2.00                  U     pause
 # CHECK-NEXT:  1      2     1.00                  U     pref	0, 1($a5)
 # CHECK-NEXT:  1      1     0.50                  U     rdpgpr	$a0, $a1
-# CHECK-NEXT:  1      1     1.00                  U     sdbbp	2
-# CHECK-NEXT:  1      1     1.00                  U     sigrie	2
+# CHECK-NEXT:  1      1     1.00                  U     sdbbp	0x2
+# CHECK-NEXT:  1      1     1.00                  U     sigrie	0x2
 # CHECK-NEXT:  1      1     1.00                  U     sync
 # CHECK-NEXT:  1      2     1.00                  U     synci	5($a6)
-# CHECK-NEXT:  1      1     1.00                  U     syscall	123
+# CHECK-NEXT:  1      1     1.00                  U     syscall	0x7b
 # CHECK-NEXT:  1      2     2.00                  U     tlbinv
 # CHECK-NEXT:  1      2     2.00                  U     tlbinvf
 # CHECK-NEXT:  1      2     2.00                  U     tlbp
@@ -103,7 +103,7 @@ wrpgpr $a0, $a1
 
 # CHECK:      Resource pressure by instruction:
 # CHECK-NEXT: [0]    [1]    [2]    [3]    [4]    [5]    [6]    [7]    Instructions:
-# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     break	5
+# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     break	0x5
 # CHECK-NEXT:  -     1.00    -      -     1.00    -      -     1.00   cache	0, 0($a1)
 # CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     deret
 # CHECK-NEXT:  -      -      -      -     2.00    -      -      -     di	$a0
@@ -121,11 +121,11 @@ wrpgpr $a0, $a1
 # CHECK-NEXT:  -      -      -      -     2.00    -      -      -     pause
 # CHECK-NEXT:  -     1.00    -      -     1.00    -      -     1.00   pref	0, 1($a5)
 # CHECK-NEXT:  -      -     0.50   0.50    -      -      -      -     rdpgpr	$a0, $a1
-# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     sdbbp	2
-# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     sigrie	2
+# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     sdbbp	0x2
+# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     sigrie	0x2
 # CHECK-NEXT:  -      -      -      -      -      -      -     1.00   sync
 # CHECK-NEXT:  -     1.00    -      -     1.00    -      -     1.00   synci	5($a6)
-# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     syscall	123
+# CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     syscall	0x7b
 # CHECK-NEXT:  -      -      -      -     2.00    -      -      -     tlbinv
 # CHECK-NEXT:  -      -      -      -     2.00    -      -      -     tlbinvf
 # CHECK-NEXT:  -      -      -      -     2.00    -      -      -     tlbp

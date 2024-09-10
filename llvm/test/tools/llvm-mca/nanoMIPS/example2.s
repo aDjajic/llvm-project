@@ -419,7 +419,7 @@ main:                                   # @main
 
 # CHECK:      Iterations:        300
 # CHECK-NEXT: Instructions:      65400
-# CHECK-NEXT: Total Cycles:      525902
+# CHECK-NEXT: Total Cycles:      533402
 # CHECK-NEXT: Total uOps:        65400
 
 # CHECK:      Dispatch Width:    2
@@ -449,7 +449,7 @@ main:                                   # @main
 # CHECK-NEXT:  1      1     1.00                        bgec	$a0, $a1, .LBB0_4
 # CHECK-NEXT:  1      1     1.00                        bc	.LBB0_2
 # CHECK-NEXT:  1      1     1.00                        balc	rand
-# CHECK-NEXT:  1      1     0.50                        li	$a1, 274877907
+# CHECK-NEXT:  1      1     0.50                        li	$a1, 0x10624dd3
 # CHECK-NEXT:  1      5     1.00                        muh	$a1, $a0, $a1
 # CHECK-NEXT:  1      1     0.50                        srl	$a2, $a1, 31
 # CHECK-NEXT:  1      1     0.50                        sra	$a1, $a1, 6
@@ -686,7 +686,7 @@ main:                                   # @main
 # CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     bgec	$a0, $a1, .LBB0_4
 # CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     bc	.LBB0_2
 # CHECK-NEXT:  -      -      -      -     1.00   1.00    -      -     balc	rand
-# CHECK-NEXT:  -      -      -     1.00    -      -      -      -     li	$a1, 274877907
+# CHECK-NEXT:  -      -      -     1.00    -      -      -      -     li	$a1, 0x10624dd3
 # CHECK-NEXT:  -     1.00    -      -      -      -     1.00    -     muh	$a1, $a0, $a1
 # CHECK-NEXT:  -      -     1.00    -      -      -      -      -     srl	$a2, $a1, 31
 # CHECK-NEXT:  -      -      -     1.00    -      -      -      -     sra	$a1, $a1, 6

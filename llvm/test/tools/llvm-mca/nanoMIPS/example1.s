@@ -109,7 +109,7 @@ main:                                   # @main
 
 # CHECK:      Iterations:        300
 # CHECK-NEXT: Instructions:      11700
-# CHECK-NEXT: Total Cycles:      96902
+# CHECK-NEXT: Total Cycles:      98402
 # CHECK-NEXT: Total uOps:        11700
 
 # CHECK:      Dispatch Width:    2
